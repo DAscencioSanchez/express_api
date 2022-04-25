@@ -39,3 +39,18 @@ app.post('/v1/explorers', (req,res) => {
     console.log(req.body) // parametros del request
     res.status(201).json({message: "Creado exitosamente"})
 })
+
+app.put('/v1/explorers/:id', (req,res) => {
+    console.log(`PUT Explorers VI API ${new Date()}`)
+    console.log(req.body) // parametros para actualizar
+    console.log(req.params.id) //query params
+    // Agregar la logica para persistir
+    res.status(200).json({message: "Actualizado exitosamente"})
+})
+
+app.delete('/v1/explorers/:id', (req,res) => {
+    console.log(`DELETE Explorers VI API ${new Date()}`)
+    
+    // Agregar la logica para eliminar el registro enviado
+    res.status(200).json({message: "Eliminado exitosamente"})
+})
