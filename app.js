@@ -32,3 +32,10 @@ app.get('/v1/explorers/:id', (req,res) => {
     //HTTP code status: 200
     res.status(200).json(explorer1)
 })
+
+app.post('/v1/explorers', (req,res) => {
+    console.log(`POST Explorers VI API ${new Date()}`)
+    // Agregar la logica para persistir
+    console.log(req.body) // parametros del request
+    res.status(201).json({message: "Creado exitosamente"})
+})
